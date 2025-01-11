@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  flask_app:
+    build: .
+    container_name: flask_app
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_PORT: 5000
+      FLASK_DEBUG: 1
+      UPLOAD_FOLDER: /app/uploads
+      SECRET_KEY: "supersecretkey"
+      MAX_GENERATION_TIME: 300
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
