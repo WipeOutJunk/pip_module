@@ -1,0 +1,56 @@
+# Игнорируем виртуальное окружение Python
+venv/
+.env/
+.env.local
+.env.*
+.venv/
+
+# Игнорируем кэш и скомпилированные файлы Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Игнорируем файлы настроек и секреты
+secrets.py
+config.py
+*.env
+*.key
+*.pem
+*.cert
+
+# Игнорируем логи и временные файлы
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Игнорируем файлы IDE
+.vscode/
+.idea/
+*.iml
+*.suo
+*.njsproj
+*.sln
+*.sw?
+
+# Игнорируем файлы Docker
+docker-compose.override.yml
+docker-compose.*.yml
+
+# Игнорируем зависимости Python
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+
+# Игнорируем файлы базы данных (если используются)
+*.db
+*.sqlite3
+
+# Игнорируем статические файлы (если используются)
+staticfiles/
+mediafiles/
+
+# Игнорируем специфичные для проекта файлы
+.DS_Store
+Thumbs.db

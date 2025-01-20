@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()  # Загружаем переменные из .env файла
 
 class Config:
-    OLLAMA_API_URL = os.getenv("OLLAMA_API_URL", "http://localhost:11434")
+    OLLAMA_API_URL = os.getenv("OLLAMA_API_URL", "http://172.18.0.2:11434")
     OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.1:8b")
     MAX_TOKENS = int(os.getenv("MAX_TOKENS", 4000))
     UPLOAD_FOLDER = os.getenv("UPLOAD_FOLDER", "temp")
